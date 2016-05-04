@@ -1,6 +1,5 @@
 package bnz;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class GameBoard {
@@ -19,9 +18,7 @@ public class GameBoard {
 	}
 	// end of constructor
 
-	/**
-	 * this method will display board to the screen
-	 */
+	// this method will display board to the screen
 
 	public void displayBoard() {
 		for (int row = 0; row < gameBoard.length; row++) {
@@ -35,17 +32,19 @@ public class GameBoard {
 					"\n----------------------------------------------------------------------------------------------------------------\n");
 		}
 	}
-	// to create a new Bonk
 
-	public void addBonk(Bonk bonk, Position pos){
-		Bonk B1 = new Bonk(null, 0, 0);
-		//not sure about (null, 0, 0) above
-		
-		gameBoard[pos.getColumnValue()][pos.getRowValue()].add(B1);
-		B1.setLocation(pos);
-		
-	}
- 
+	/**
+	 * to create a new Bonk?????????????????????????????????
+	 * 
+	 * public void addBonk(Bonk bonk, Position pos){ Bonk B1 = new Bonk(null, 0,
+	 * 0); //not sure about (null, 0, 0) above
+	 * 
+	 * gameBoard[pos.getColumnValue()][pos.getRowValue()].add(B1);
+	 * B1.setLocation(pos);
+	 * 
+	 * }
+	 */
+
 	public void spawnEngine() {
 
 		int numberOfBonks = 20;
@@ -54,20 +53,19 @@ public class GameBoard {
 			Position pos = new Position();
 			pos.positionGenerator();
 			Bonk bonk = new Bonk(null, B, B);
-			//not sure again
+			// not sure again
 			bonk.setLocation(pos);
 
 			// adds it to the array
 
-			this.addBonk(bonk, pos);
+			// this.addBonk(bonk, pos);
 		}
 	}
-		// moves the creature
+	// moves the creature
 
 	public void moveCreature(Creature creature, Position oldPos, Position newPos) {
 	}
 
-	// renaming the grid world to baord
-
+	// renaming the grid world to board
 
 }

@@ -17,7 +17,7 @@ public class WhereToMoveTo {
 
 	public Direction getRandomDirection() {
 		Random rn = new Random();
-		int randomNumber = rn.nextInt(8) + 1;
+		int randomNumber = rn.nextInt(8) + 1;//8?
 		return Direction.values()[randomNumber];
 	}
 
